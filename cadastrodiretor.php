@@ -37,7 +37,7 @@
                             <p>Registrar um novo funcionário no sistema</p>
                         </div>
                         <div class="login-form">
-                            <form action="" method="post">
+                            <form action="cadastrar.php" method="post">
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">Nome Completo</div>
@@ -50,7 +50,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">Registro Funcional</div>
-                                        <input type="email" id="rf" name="rf" class="form-control">
+                                        <input type="text" id="rf" name="rf" class="form-control">
                                         <div class="input-group-addon">
                                             <i class="fa fa-archive"></i>
                                         </div>
@@ -59,15 +59,15 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <div class="input-group-addon">Cargo</div>
-                                        <select name="select" id="select" class="form-control">
+                                        <select name="cargo" id="cargo" class="form-control">
                                             <option value="" disabled selected>Selecione um Cargo</option>
-                                            <option value="ag">Agente Administrativo</option>
-                                            <option value="assistente">Assistente de Direção</option>
-                                            <option value="atp">Assistente Técnico Pedagógico</option>
-                                            <option value="diretor">Diretor da Escola</option>
-                                            <option value="pedagoga">Pedagoga Comunitária</option>
-                                            <option value="secretario">Secretário da Escola</option>
-                                            <option value="readaptado">Funcionário Readaptado</option>
+                                            <option value="Agente Administrativo">Agente Administrativo</option>
+                                            <option value="Assistente de Direção">Assistente de Direção</option>
+                                            <option value="Assistente Técnico Pedagógico">Assistente Técnico Pedagógico</option>
+                                            <option value="Diretor da Escola">Diretor da Escola</option>
+                                            <option value="Pedagoga Comunitária">Pedagoga Comunitária</option>
+                                            <option value="Secretário da Escola">Secretário da Escola</option>
+                                            <option value="Funcionário Readaptado">Funcionário Readaptado</option>
                                         </select>
                                         <div class="input-group-addon">
                                             <i class="fa fa-users"></i>
