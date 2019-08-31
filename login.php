@@ -35,12 +35,22 @@
                         <div class="login-form">
                             <form action="autenticar.php" method="post">
                                 <div class="form-group">
-                                    <label>Registo Funcional</label>
-                                    <input class="au-input au-input--full" type="text" name="rf" placeholder="RF">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Registro Funcional</div>
+                                        <input type="text" id="rf" name="rf" class="form-control">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-archive"></i>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>Senha</label>
-                                    <input class="au-input au-input--full" type="password" name="senha" placeholder="Senha">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">Senha</div>
+                                        <input type="password" id="senha" name="senha" class="form-control">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-asterisk"></i>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="login-checkbox">
                                     <label>

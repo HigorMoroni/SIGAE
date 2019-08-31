@@ -324,7 +324,7 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="images/usuarios/<?=$linha['rf']?>.jpg" alt="usuario" />
+                                            <img src="http://www.praiagrande.sp.gov.br/pontoeletronico/fotos/0<?=$linha['rf']?>.jpg" alt="usuario" />
                                         </div>
                                         <div class="content">
                                             <a class="js-acc-btn" href="#"><?=$linha['nome']?></a>
@@ -333,7 +333,7 @@
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="images/usuarios/<?=$linha['rf']?>.jpg" alt="usuario" />
+                                                        <img src="http://www.praiagrande.sp.gov.br/pontoeletronico/fotos/0<?=$linha['rf']?>.jpg?>.jpg" alt="usuario" />
                                                     </a>
                                                 </div>
                                                 <div class="content">
