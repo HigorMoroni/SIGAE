@@ -32,6 +32,16 @@
                                 <img src="images/logoSIGAE.png" alt="SIGAE">
                             </a>
                         </div>
+                            <?php $erro = ( isset($_GET['erro']) ) ? $_GET['erro'] : null;
+                            if ($erro != null){?>
+                            <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+								<span class="badge badge-pill badge-danger">ERRO</span>
+								Dados incorretos, tente novamente!
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+                            <?php } ?>
                         <div class="login-form">
                             <form action="autenticar.php" method="post">
                                 <div class="form-group">

@@ -13,6 +13,6 @@
 		$_SESSION['senha'] = $_POST['senha'];
 		header('Location: index.php');
 	}else{
-		header('Location: login.php?erro=1');
+		header('Location: login.php?erro=errologin');
 	}
 ?>
