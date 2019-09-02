@@ -31,9 +31,7 @@
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
-                            <a href="#">
-                                <img src="images/logoSIGAE.png" alt="SIGAE">
-                            </a>
+                            <img src="images/logoSIGAE.png" alt="SIGAE">
                             <p>Registrar um novo funcionário no sistema</p>
                         </div>
                         <div class="login-form">

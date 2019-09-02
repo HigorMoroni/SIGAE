@@ -1,18 +1,18 @@
-<?php 
-    require ("db.php");
-    session_start();
-    if(!isset($_SESSION['rf']) || !isset($_SESSION['senha'])){
-        header('Location: login.php');
-    }
-    $rfAut = ($_SESSION['rf']);
-    $senhaAut = ($_SESSION['senha']);
-    $query = sprintf("SELECT rf, nome, cargo FROM aut WHERE rf='$rfAut' AND senha='$senhaAut'");
-    $dados = mysqli_query($conn, $query) or die(mysqli_error());
-    $linha = mysqli_fetch_assoc($dados);
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <?php 
+        require ("db.php");
+        session_start();
+        if(!isset($_SESSION['rf']) || !isset($_SESSION['senha'])){
+            header('Location: login.php');
+        }
+        $rfAut = ($_SESSION['rf']);
+        $senhaAut = ($_SESSION['senha']);
+        $query = sprintf("SELECT rf, nome, cargo FROM aut WHERE rf='$rfAut' AND senha='$senhaAut'");
+        $dados = mysqli_query($conn, $query) or die(mysqli_error());
+        $linha = mysqli_fetch_assoc($dados);
+    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
@@ -916,9 +916,56 @@
             <!-- END MAIN CONTENT-->
             <!-- END PAGE CONTAINER-->
         </div>
-
     </div>
-
+    <div class="modal fade" id="modalsenha" tabindex="-1" role="dialog" aria-labelledby="modalsenhaLabel" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalsenhaLabel">Bem vindo ao SIGAE</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Olá <?=$linha['nome']?>, é um prazer te-lo conosco!</br>
+                    Como esse é seu primeiro acesso ao SIGAE, pedimos que cadastre uma nova senha.</br></br></p>
+                    <div class="login-form">
+                        <form action="novasenha.php" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Registro Funcional</div>
+                                    <input type="text" id="rfmodal" name="rfmodal" class="form-control" value="<?=$linha['rf']?>" readonly="true">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-asterisk"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Nova Senha</div>
+                                    <input type="password" id="senhamodal" name="senhamodal" class="form-control">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-asterisk"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Repita a Senha</div>
+                                    <input type="password" id="repsenhamodal" name="repsenhamodal" class="form-control">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-asterisk"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p></br></p>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cadastrar Depois</button>
+                                <button type="submit" class="btn btn-primary" onClick="validatePassword()">Salvar Alterações</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Jquery JS-->
     <script src="vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
@@ -942,6 +989,31 @@
 
     <!-- Main JS-->
     <script src="js/main.js"></script>
+    <!-- Script do Modal -->
+    <?php
+        if ($senhaAut == "123456") { ?>
+            <script type="text/javascript"> 
+                $(document).ready(function() {
+                    $('#modalsenha').modal('show');
+                })
+            </script>
+        <?php } ?>
+    <!-- Script Validar Senha -->
+    <script>
+        var password = document.getElementById("senhamodal")
+    , confirm_password = document.getElementById("repsenhamodal");
+
+    function validatePassword(){
+        if (password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Senhas diferentes, favor corrigir!");
+        } else {
+        confirm_password.setCustomValidity('');
+        }
+    }
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+    </script>
+
 
 </body>
 
