@@ -3,10 +3,7 @@
 <head>
     <?php 
         require ("db.php");
-        session_start();
-        if(!isset($_SESSION['rf']) || !isset($_SESSION['senha'])){
-            header('Location: login.php');
-        }
+        session_start(); if(!isset($_SESSION["autenticado"])){header("Location: login.php");}
         $rfAut = ($_SESSION['rf']);
         $senhaAut = ($_SESSION['senha']);
         $query = sprintf("SELECT rf, nome, cargo FROM aut WHERE rf='$rfAut' AND senha='$senhaAut'");
@@ -955,6 +952,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php $erro = ( isset($_GET['erro']) ) ? $_GET['erro'] : null;
+                            if ($erro != null){?>
+                            <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show">
+								<span class="badge badge-pill badge-danger">ERRO</span>
+								Senha não alterada, tente novamente!
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+                            <?php } ?>
                             <p></br></p>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cadastrar Depois</button>

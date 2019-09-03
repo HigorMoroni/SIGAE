@@ -9,6 +9,7 @@
 
 	if ($row > 0){
 		session_start();
+		$_SESSION['autenticado'] = true;
 		$_SESSION['rf'] = $_POST['rf'];
 		$_SESSION['senha'] = $_POST['senha'];
 		header('Location: index.php');
