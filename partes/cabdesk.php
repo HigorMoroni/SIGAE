@@ -11,11 +11,10 @@
                 <div class="header-button">
                     <div class="noti-wrap">
                         <div class="noti__item js-item-menu">
-                            <i class="zmdi zmdi-comment-more"></i>
-                            <span class="quantity">1</span>
+                            <i class="zmdi zmdi-account-circle"></i>
                             <div class="mess-dropdown js-dropdown">
                                 <div class="mess__title">
-                                    <p>You have 2 news message</p>
+                                    <p>Configurações de Conta</p>
                                 </div>
                                 <div class="mess__item">
                                     <div class="image img-cir img-40">
@@ -47,7 +46,7 @@
                             <span class="quantity">1</span>
                             <div class="email-dropdown js-dropdown">
                                 <div class="email__title">
-                                    <p>You have 3 New Emails</p>
+                                    <p>Mensagens do Sistema</p>
                                 </div>
                                 <div class="email__item">
                                     <div class="image img-cir img-40">
@@ -82,11 +81,11 @@
                             </div>
                         </div>
                         <div class="noti__item js-item-menu">
-                            <i class="zmdi zmdi-notifications"></i>
+                            <i class="zmdi zmdi-calendar-check"></i>
                             <span class="quantity">3</span>
                             <div class="notifi-dropdown js-dropdown">
                                 <div class="notifi__title">
-                                    <p>You have 3 Notifications</p>
+                                    <p>Tarefas</p>
                                 </div>
                                 <div class="notifi__item">
                                     <div class="bg-c1 img-cir img-40">

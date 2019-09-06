@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <?php 
-        require ("db.php");
-        session_start(); if(!isset($_SESSION["autenticado"])){header("Location: logout.php");}
-        $rfAut = ($_SESSION['rf']);
-        $senhaAut = ($_SESSION['senha']);
-        $query = sprintf("SELECT rf, nome, cargo FROM aut WHERE rf='$rfAut' AND senha='$senhaAut'");
-        $dados = mysqli_query($conn, $query) or die(mysqli_error());
-        $linha = mysqli_fetch_assoc($dados);
-    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="au theme template">
