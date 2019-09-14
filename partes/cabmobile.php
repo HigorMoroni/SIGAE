@@ -21,7 +21,7 @@
                         <i class="fas fa-tachometer-alt"></i>Alunos</a>
                     <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
                         <li>
-                            <a href="index.html">Matricular Aluno</a>
+                            <a href="matricularaluno.php">Matricular Aluno</a>
                         </li>
                         <li>
                             <a href="index2.html">Lista Piloto</a>
