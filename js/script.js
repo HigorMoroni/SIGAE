@@ -211,18 +211,18 @@
     }
 
 
-    //WidgetChart 4
-    var ctx = document.getElementById("widgetChart4");
+    //Canvas Alunos
+    var ctx = document.getElementById("totalalunos");
     if (ctx) {
       ctx.height = 115;
       var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
           datasets: [
             {
               label: "My First dataset",
-              data: [78, 81, 80, 65, 58, 75, 60, 75, 65, 60, 60, 75],
+              data: [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65],
               borderColor: "transparent",
               borderWidth: "0",
               backgroundColor: "rgba(255,255,255,.3)"

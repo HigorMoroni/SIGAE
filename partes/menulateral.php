@@ -1,7 +1,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
-        <a href="#">
-            <img src="images/logoSIGAE.png" alt="Cool Admin" />
+        <a href="index.php">
+            <img src="images/logoSIGAE.png" alt="SIGAE" />
         </a>
     </div>
     <div class="menu-sidebar__content js-scrollbar1">
